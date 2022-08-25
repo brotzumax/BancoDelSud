@@ -1,4 +1,5 @@
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header>
         <h1>Banco del Süd</h1>
       </header>
+      <NavBar />
     </div>
   );
 }
