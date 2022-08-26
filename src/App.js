@@ -1,13 +1,17 @@
 import './App.css';
+import Header from './components/Header';
 import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Banco del Süd</h1>
-      </header>
-      <NavBar />
+      <Header />
+      <div className="Contenido">
+        <NavBar />
+        <div className="Main">
+          
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,19 @@
 header {
-  width: 100%;
-  background-color: #66B2FF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(236deg, rgba(255, 255, 255, 1) 17%, rgba(102, 178, 255, 1) 100%);
   border-bottom: 1px solid black;
+  padding-left: 40px;
+  position: sticky;
+  top: 0px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
 }
 
 h1 {
@@ -15,19 +27,24 @@ h1 {
 }
 
 .NavBar {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: sticky;
+  top: 84px;
 
   width: 250px;
   height: calc(100vh - 84px);
-  background-color: #66B2FF;
+  /* background-color: #66B2FF; */
+  background: rgb(166, 211, 255);
+  background: linear-gradient(270deg, rgba(166, 211, 255, 1) 0%, rgba(102, 178, 255, 1) 100%);
 
 }
 
 .NavBar button {
   border: 0px;
-  background-color: #66B2FF;
+  /* background-color: #66B2FF; */
+  background-color: transparent;
   transition: ease-in-out;
   transition-duration: 250ms;
 
@@ -39,4 +56,15 @@ h1 {
 .NavBar button:hover {
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.Contenido {
+  display: flex;
+}
+
+.Main {
+  width: 100%;
+
+  background: rgb(184, 79, 0);
+  background: linear-gradient(180deg, rgba(184, 79, 0, 1) 21%, rgba(220, 244, 53, 1) 100%);
 }
