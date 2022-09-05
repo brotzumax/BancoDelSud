@@ -1,10 +1,10 @@
 import React from "react";
 import { Component } from "react";
 
-export default class MensajeBienvenida extends Component {
+export default class ItemListContainer extends Component {
     render() {
         return (
-            <div className="MensajeBienvenida">
+            <div className="ItemListContainer">
                 <p>
                     Bienvenido {this.props.usuario}
                 </p>
