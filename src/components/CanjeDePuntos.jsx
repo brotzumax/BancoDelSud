@@ -1,11 +1,11 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import ItemListContainer from "./ItemListContainer";
 
 function CanjeDePuntos(){
     return(
         <div className="CanjeDePuntos">
             <h2>Sistema de canje de puntos</h2>
-            <ItemCount initial={1} stock={5} onAdd={0}/>
+            <ItemListContainer />
         </div>
     )
 }

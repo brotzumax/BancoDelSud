@@ -65,17 +65,17 @@ h1 {
   width: 100%;
 }
 
-.ItemListContainer {
+.MensajeBienvenida {
   padding-top: 30px;
   padding-left: 30px;
 }
 
-.ItemListContainer p:first-child {
+.MensajeBienvenida p:first-child {
   margin: 0px;
   font-size: 28px;
 }
 
-.ItemListContainer button {
+.MensajeBienvenida button {
   margin-left: 5px;
   border: 0px;
   background-color: #FFFFFF;
@@ -89,14 +89,39 @@ h1 {
   padding-top: 30px;
 }
 
-.ItemCount {
-  width: 250px;
-  display: flex;
+.Item {
+  padding-top: 16px;
+  margin-bottom: 16px;
+  display:inline-block;
   flex-direction: column;
   align-items: center;
 
   border: 1px solid #000000;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+.Item .Contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.Item .Contenido p:nth-child(3) {
+  margin-top: 0px;
+}
+
+.ItemList {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.ItemCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ItemCount .addProduct{

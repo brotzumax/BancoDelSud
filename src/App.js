@@ -1,7 +1,7 @@
 import './App.css';
 import CanjeDePuntos from './components/CanjeDePuntos';
 import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
+import MensajeBienvenida from './components/MensajeBienvenida';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <div className="Contenido">
         <NavBar />
         <div className="Main">
-          <ItemListContainer usuario="Usuario" />
+          <MensajeBienvenida usuario="Usuario" />
           <CanjeDePuntos />
         </div>
       </div>

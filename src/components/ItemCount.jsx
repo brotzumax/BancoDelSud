@@ -20,13 +20,12 @@ function ItemCount({ initial, stock, onAdd }) {
 
     function agregarProductos() {
         if (cantidad <= itemStock) {
-            setItemStock(itemStock - cantidad);//4
-            setItemAdd(itemAdd + cantidad);//0+1=1
+            setItemStock(itemStock - cantidad);
+            setItemAdd(itemAdd + cantidad);
         }
     }
     return (
         <div className="ItemCount">
-            <p>Producto</p>
             <div className="inputs">
                 <button onClick={() => { incrementarCantidad(cantidad + 1) }}>+</button>
                 <input type="text" value={cantidad} onChange={() => { }} />
