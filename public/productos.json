@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Un viaje a Cancun",
-        "price": "$3,000",
+        "price": "3850000",
         "image": "https://dummyimage.com/200x200/000/fff",
         "stock": 10,
         "category": "Vacaciones"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "LG /TV 65'",
-        "price": "$5,000",
+        "price": "380000",
         "image": "https://dummyimage.com/200x200/000/fff",
         "stock": 5,
         "category": "Electronica"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Auriculares inalambricos",
-        "price": "$1,500",
+        "price": "$29000",
         "image": "https://dummyimage.com/200x200/000/fff",
         "stock": 20,
         "category": "Electronica"

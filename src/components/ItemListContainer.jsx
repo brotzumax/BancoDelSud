@@ -8,14 +8,11 @@ function ItemListContainer() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        const articulos = [
-            { "id": 1, "Nombre": "Viaje a Miami", "Imagen": "https://dummyimage.com/200x200/000/fff", "Puntos": 3600000 },
-            { "id": 2, "Nombre": "LG/TV 65", "Imagen": "https://dummyimage.com/200x200/000/fff", "Puntos": 400000 }
-        ];
-
         const getArticulos = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(articulos);
+                fetch('./productos.json')
+                    .then(respuesta => respuesta.json())
+                    .then(data => resolve(data))
             }, 2000);
         });
 

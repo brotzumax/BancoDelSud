@@ -6,7 +6,7 @@ function ItemList({ items }) {
         <div className="ItemList">
             {items.map(item => (
                 <div key={item.id}>
-                    <Item nombre={item.Nombre} imagen={item.Imagen} puntosReq={item.Puntos}/>
+                    <Item nombre={item.name} imagen={item.image} puntosReq={item.price}/>
                 </div>)
             )}
         </div>
