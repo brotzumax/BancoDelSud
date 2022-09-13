@@ -1,14 +1,13 @@
 import React from "react";
-import ItemCount from "./ItemCount";
 
-function Item({ imagen, nombre, puntosReq }) {
+function Item({ item, onAdd }) {
     return (
         <div className="Item">
             <div className="Contenido">
-                <img src={imagen} alt={nombre} />
-                <p>{nombre}</p>
-                <p>Valor: {puntosReq} puntos</p>
-                <ItemCount initial={1} stock={5} onAdd={0} />
+                <img src={item.image} alt={item.name} />
+                <p>{item.name}</p>
+                <p>Valor: {item.price} puntos</p>
+                <button onClick={() => { onAdd( item ) }}>Ver detalle</button>
             </div>
         </div>
     )

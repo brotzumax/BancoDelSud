@@ -4,7 +4,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 
-function ItemListContainer() {
+function ItemListContainer({onAdd}) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ function ItemListContainer() {
 
     return (
         <div className="ItemListContainer">
-            <ItemList items={items}/>
+            <ItemList items={items} onAdd={onAdd}/>
         </div>
     )
 }

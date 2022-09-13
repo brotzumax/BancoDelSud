@@ -86,13 +86,15 @@ h1 {
 
 .CanjeDePuntos {
   margin-left: 30px;
+  margin-right: 30px;
   padding-top: 30px;
 }
 
 .Item {
   padding-top: 16px;
+  padding-bottom: 16px;
   margin-bottom: 16px;
-  display:inline-block;
+  display: inline-block;
   flex-direction: column;
   align-items: center;
 
@@ -112,10 +114,67 @@ h1 {
   margin-top: 0px;
 }
 
+.Item button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #66b2ff;
+  border: 0px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+
+  transition: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.Item button:hover {
+  background-color: #007dfa;
+}
+
 .ItemList {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.ItemDetail {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 15px;
+
+  border: 1px solid #000000;
+}
+
+.ItemDetail .Detalles {
+  width: 70%;
+}
+
+.ItemDetail .Detalles p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ItemDetail .Detalles .Detalles-Img {
+  display: flex;
+  justify-content: center;
+}
+
+.ItemDetail .Detalles .Detalles-Img img {
+  width: 300px;
+  height: 300px;
+}
+
+.ItemDetail .Informacion {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ItemDetail .Informacion p {
+  margin: 0px;
 }
 
 .ItemCount {
@@ -124,7 +183,7 @@ h1 {
   align-items: center;
 }
 
-.ItemCount .addProduct{
+.ItemCount .addProduct {
   margin-bottom: 16px;
   font-size: 18px;
   border-radius: 5px;

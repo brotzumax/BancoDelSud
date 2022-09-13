@@ -1,10 +1,15 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
-function ItemCount({ initial, stock, onAdd }) {
-    const [cantidad, setCantidad] = useState(initial);
+function ItemCount({ stock }) {
+    const [cantidad, setCantidad] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
-    const [itemAdd, setItemAdd] = useState(onAdd);
+    const [itemAdd, setItemAdd] = useState(0);
+
+    useEffect(() => {
+        setItemStock(stock);
+    }, [stock])
 
     function decrementarCantidad(valor) {
         if (valor >= 0) {
@@ -13,7 +18,7 @@ function ItemCount({ initial, stock, onAdd }) {
     }
 
     function incrementarCantidad(valor) {
-        if ((valor) <= itemStock) {
+        if (valor <= itemStock) {
             setCantidad(valor);
         }
     }
@@ -27,9 +32,9 @@ function ItemCount({ initial, stock, onAdd }) {
     return (
         <div className="ItemCount">
             <div className="inputs">
-                <button onClick={() => { incrementarCantidad(cantidad + 1) }}>+</button>
-                <input type="text" value={cantidad} onChange={() => { }} />
                 <button onClick={() => { decrementarCantidad(cantidad - 1) }}>-</button>
+                <input type="text" value={cantidad} onChange={() => { }} />
+                <button onClick={() => { incrementarCantidad(cantidad + 1) }}>+</button>
             </div>
             <button className="addProduct" onClick={() => { agregarProductos() }}>Agregar productos</button>
         </div>
