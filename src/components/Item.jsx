@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Item({ item, onAdd }) {
     return (
@@ -7,7 +8,7 @@ function Item({ item, onAdd }) {
                 <img src={item.image} alt={item.name} />
                 <p>{item.name}</p>
                 <p>Valor: {item.price} puntos</p>
-                <button onClick={() => { onAdd( item ) }}>Ver detalle</button>
+                <Link to={`/canje-de-puntos/item/${item.id}`}>Ver detalle</Link>
             </div>
         </div>
     )

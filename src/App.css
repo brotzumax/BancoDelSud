@@ -40,10 +40,11 @@ h1 {
 
 }
 
-.NavBar button {
-  border: 0px;
-  cursor: pointer;
-  background-color: transparent;
+.NavBar a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: ease-in-out;
   transition-duration: 250ms;
 
@@ -52,7 +53,7 @@ h1 {
   flex-grow: 1;
 }
 
-.NavBar button:hover {
+.NavBar a:hover {
   background-color: #FFFFFF;
   color: #000000;
 }
@@ -84,10 +85,48 @@ h1 {
   cursor: pointer;
 }
 
-.CanjeDePuntos {
+.ItemListContainer {
   margin-left: 30px;
   margin-right: 30px;
-  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.ItemListContainer h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.ItemListContainer .Categorias{
+  margin-bottom: 30px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.ItemListContainer .Categorias button{
+  height: 35px;
+
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  cursor: pointer;
+
+  transition: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.ItemListContainer .Categorias .btnTodos:hover{
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.ItemListContainer .Categorias .btnViajes:hover{
+  background-color: orange;
+}
+
+.ItemListContainer .Categorias .btnElectronica:hover{
+  background-color: tomato;
 }
 
 .Item {
@@ -98,7 +137,7 @@ h1 {
   flex-direction: column;
   align-items: center;
 
-  border: 1px solid #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
 }
 
@@ -114,20 +153,19 @@ h1 {
   margin-top: 0px;
 }
 
-.Item button {
-  padding: 10px;
+.Item a {
+  padding: 8px;
   font-size: 20px;
   background-color: #66b2ff;
-  border: 0px;
   border-radius: 5px;
   color: #ffffff;
-  cursor: pointer;
+  text-decoration: none;
 
   transition: ease-in-out;
   transition-duration: 250ms;
 }
 
-.Item button:hover {
+.Item a:hover {
   background-color: #007dfa;
 }
 
@@ -137,12 +175,24 @@ h1 {
   gap: 20px;
 }
 
-.ItemDetail {
-  display: flex;
-  margin-bottom: 30px;
+.ItemDetailContainer {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
   padding: 15px;
+  padding-bottom: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-  border: 1px solid #000000;
+.ItemDetailContainer h3 {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.ItemDetail {
+  padding-top: 30px;
+  display: flex;
 }
 
 .ItemDetail .Detalles {
@@ -173,8 +223,9 @@ h1 {
   justify-content: space-around;
 }
 
-.ItemDetail .Informacion p {
+.ItemDetail .Informacion p:first-child {
   margin: 0px;
+  font-weight: bold;
 }
 
 .ItemCount {
