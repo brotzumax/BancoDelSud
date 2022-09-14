@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-function Item({ item, onAdd }) {
+function Item({ item }) {
     return (
         <div className="Item">
             <div className="Contenido">

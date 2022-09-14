@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Proyecto Final - Banco del Sud
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proyecto consta de un banco online en el que se permite realizar pedido de artículos mediante el canje de puntos
 
-## Available Scripts
+## ItemListContainer
 
-In the project directory, you can run:
+El componente ItemListContainer consta de:
+```
+const { category } = useParams();
+const [items, setItems] = useState([]);
+const [itemsCategoria, setItemsCategoria] = useState([]);
+```
+en donde "category" se utiliza para realizar un filtrado de los artículos mostrados, "items" para el guardado del primer fetch() del componente, y "itemsCategoria" para guardar los articulos filtrados.
+Cada vez que se realiza un cambio de "category", mediante un useEffect() se modifica "itemsCategorias" para mostrar los nuevos artículos.
 
-### `npm start`
+### ItemList
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El componente ItemList recibe como parametro un array de productos y los mapea en diferentes Item
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Item
 
-### `npm test`
+Cada Item recibe un objeto que, mediante sus propiedades, muestra su imagen, nombre y valor en puntos. También contiene un Link que modifica la ruta de la página para ver los detalles del Item, enviando también su número de ID.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ItemDetailContainer
 
-### `npm run build`
+El componente ItemDetailContainer consta de:
+```
+const {itemId} = useParams();
+const [producto, setProducto] = useState({});
+```
+en donde "itemId" es la ID enviada desde el componente "Item" al precionar en el botón "Ver detalle". Se utiliza un useEffect cada vez que el ID se modifica, se realiza un fetch al archivo .JSON y mediante el metodo find() se toma al item de dicha ID.
+Este item es enviado por parámetro al componente ItemDetail
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ItemDetail
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Obtiene los datos del item enviados por parámetro y los muestra en pantalla.
