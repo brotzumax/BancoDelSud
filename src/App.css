@@ -133,7 +133,7 @@ h1 {
   padding-top: 16px;
   padding-bottom: 16px;
   margin-bottom: 16px;
-  display: inline-block;
+  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -148,6 +148,12 @@ h1 {
   padding-left: 16px;
   padding-right: 16px;
 }
+
+.Item .Contenido img{
+  width: 200px;
+  height: 200px;
+}
+
 
 .Item .Contenido p:nth-child(3) {
   margin-top: 0px;
@@ -171,7 +177,9 @@ h1 {
 
 .ItemList {
   display: flex;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
