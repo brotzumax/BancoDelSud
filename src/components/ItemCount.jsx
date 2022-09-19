@@ -2,10 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function ItemCount({ stock }) {
+function ItemCount({ stock, onAdd }) {
     const [cantidad, setCantidad] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
-    const [itemAdd, setItemAdd] = useState(0);
 
     useEffect(() => {
         setItemStock(stock);
@@ -25,8 +24,9 @@ function ItemCount({ stock }) {
 
     function agregarProductos() {
         if (cantidad <= itemStock) {
+            onAdd(cantidad);
             setItemStock(itemStock - cantidad);
-            setItemAdd(itemAdd + cantidad);
+            setCantidad(itemStock - cantidad);
         }
     }
     return (

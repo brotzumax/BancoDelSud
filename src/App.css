@@ -96,14 +96,14 @@ h1 {
   font-size: 28px;
 }
 
-.ItemListContainer .Categorias{
+.ItemListContainer .Categorias {
   margin-bottom: 30px;
 
   display: flex;
   gap: 10px;
 }
 
-.ItemListContainer .Categorias button{
+.ItemListContainer .Categorias button {
   height: 35px;
 
   font-size: 18px;
@@ -116,16 +116,16 @@ h1 {
   transition-duration: 250ms;
 }
 
-.ItemListContainer .Categorias .btnTodos:hover{
+.ItemListContainer .Categorias .btnTodos:hover {
   color: #ffffff;
   background-color: #000000;
 }
 
-.ItemListContainer .Categorias .btnViajes:hover{
+.ItemListContainer .Categorias .btnViajes:hover {
   background-color: orange;
 }
 
-.ItemListContainer .Categorias .btnElectronica:hover{
+.ItemListContainer .Categorias .btnElectronica:hover {
   background-color: tomato;
 }
 
@@ -226,6 +226,28 @@ h1 {
 .ItemDetail .Informacion p:first-child {
   margin: 0px;
   font-weight: bold;
+}
+
+.ItemDetail .Informacion .ToCart {
+  display: flex;
+  justify-content: center;
+}
+
+.ItemDetail .Informacion .ToCart button {
+  padding: 8px;
+  font-size: 20px;
+  background-color: #ff8514;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+
+  transition: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.ItemDetail .Informacion .ToCart button:hover {
+  background-color: #a1560f;
 }
 
 .ItemCount {
