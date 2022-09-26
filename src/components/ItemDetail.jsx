@@ -1,9 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import { CartContext } from "./Context";
+import { CartContext } from "../context/Context";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import ToCart from "./ToCart";
 
 function ItemDetail({ item }) {

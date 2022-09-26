@@ -28,8 +28,29 @@ function Provider({ children }) {
         return cart.reduce((total, item) => total += item.cantidad, 0);
     }
 
+    function removeItem(id) {
+        let index;
+        cart.forEach(item => {
+            if(item.id === id){
+                index = cart.indexOf(item);
+            }
+        });
+        cart.splice(index, 1);
+        setCart([...cart]);
+    }
+
+    function totalPrice(){
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            totalPrice += (item.price * item.cantidad);
+        });
+
+        return totalPrice;
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addItem, clear, cartTotal }}>
+        <CartContext.Provider value={{ cart, addItem, clear, cartTotal, removeItem, totalPrice }}>
             {children}
         </CartContext.Provider>
     );
