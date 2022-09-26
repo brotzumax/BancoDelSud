@@ -85,6 +85,12 @@ h1 {
   cursor: pointer;
 }
 
+.PantallaDeCarga {
+  display: flex;
+  justify-content: center;
+  margin-top: 125px;
+}
+
 .ItemListContainer {
   margin-left: 30px;
   margin-right: 30px;
