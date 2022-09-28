@@ -156,11 +156,18 @@ h1 {
 }
 
 .ItemListContainer .Categorias .btnViajes:hover {
+  color: #ffffff;
   background-color: orange;
 }
 
 .ItemListContainer .Categorias .btnElectronica:hover {
+  color: #ffffff;
   background-color: tomato;
+}
+
+.ItemListContainer .Categorias .btnVarios:hover {
+  color: #ffffff;
+  background-color: #00720f;
 }
 
 .Item {

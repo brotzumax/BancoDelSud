@@ -13,6 +13,7 @@ function ItemDetail({ item }) {
         setCounter(counter);
         addItem(item, counter);
     }
+
     return (
         <div className="ItemDetail">
             <div className="Detalles">

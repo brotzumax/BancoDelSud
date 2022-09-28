@@ -6,12 +6,12 @@ import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/Context";
 import PantallaDeCarga from "./PantallaDeCarga";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
 function ItemListContainer() {
     const { category } = useParams();
     const [items, setItems] = useState([]);
-    const [itemsCategoria, setItemsCategoria] = useState([]);
     const { cartTotal } = useContext(CartContext);
 
     function GoToCart() {
@@ -34,34 +34,38 @@ function ItemListContainer() {
                 </div>
                 <div className="Categorias">
                     <Link to={`/canje-de-puntos`}>
-                        <button className="btnTodos" onClick={() => { setItemsCategoria(items) }}>Todos</button>
+                        <button className="btnTodos">Todos</button>
                     </Link>
-                    <Link to={`/canje-de-puntos/categoria/Viajes`}><button className="btnViajes">Viajes</button></Link>
-                    <Link to={`/canje-de-puntos/categoria/Electronica`}><button className="btnElectronica">Electronica</button></Link>
+                    <Link to={`/canje-de-puntos/Viajes`}><button className="btnViajes">Viajes</button></Link>
+                    <Link to={`/canje-de-puntos/Electronica`}><button className="btnElectronica">Electronica</button></Link>
+                    <Link to={`/canje-de-puntos/Varios`}><button className="btnVarios">Varios</button></Link>
                 </div>
-                <ItemList items={itemsCategoria} />
+                <ItemList items={items} />
             </div>
         )
     }
 
-    useEffect(() => {
-        const getArticulos = new Promise((resolve) => {
-            setTimeout(() => {
-                fetch('./productos.json')
-                    .then(respuesta => respuesta.json())
-                    .then(data => resolve(data))
-            }, 2000);
-        });
+    function SolicitarItems() {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+        getDocs(itemsCollection).then((snapshot => {
+            setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        }));
+    }
 
-        getArticulos.then((respuesta) => {
-            setItems(respuesta);
-            setItemsCategoria(respuesta);
-        });
+    useEffect(() => {
+        SolicitarItems();
     }, []);
 
     useEffect(() => {
         if (typeof category != "undefined") {
-            setItemsCategoria(items.filter(producto => producto.category === category));
+            const db = getFirestore();
+            const q = query(collection(db, "items"), where("category", "==", category));
+            getDocs(q).then((snapshot) => {
+                setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            })
+        } else {
+            SolicitarItems();
         }
     }, [category]);
 
