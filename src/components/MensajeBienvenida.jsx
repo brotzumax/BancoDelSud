@@ -1,17 +1,24 @@
 import React from "react";
-import { Component } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/Context";
 
-export default class MensajeBienvenida extends Component {
-    render() {
-        return (
-            <div className="MensajeBienvenida">
-                <p>
-                    Bienvenido {this.props.usuario}
-                </p>
-                <p>
-                    ¿No es usted?<button>Cerrar sesión</button>
-                </p>
-            </div>
-        )
+function MensajeBienvenida() {
+    const { CloseSession } = useContext(CartContext);
+    const { user } = useContext(CartContext);
+
+    function CerrarSesion() {
+        CloseSession();
     }
+    return (
+        <div className="MensajeBienvenida">
+            <p>
+                Bienvenido {user.username}
+            </p>
+            <p>
+                ¿No es usted?<button onClick={CerrarSesion}>Cerrar sesión</button>
+            </p>
+        </div>
+    )
 }
+
+export default MensajeBienvenida;

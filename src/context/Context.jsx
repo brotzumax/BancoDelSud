@@ -4,6 +4,7 @@ export const CartContext = createContext();
 
 function Provider({ children }) {
     const [cart, setCart] = useState([]);
+    const [user, setUser] = useState(undefined);
 
     function addItem(item, cantidad) {
         if (isInCart(item.id)) {
@@ -15,7 +16,7 @@ function Provider({ children }) {
         }
     }
 
-    function clear() {
+    function clearCart() {
         setCart([]);
     }
 
@@ -49,8 +50,16 @@ function Provider({ children }) {
         return totalPrice;
     }
 
+    function newUser(usuario, email, password){
+        setUser({username: usuario, email: email, password: password});
+    }
+
+    function CloseSession(){
+        setUser(undefined);
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addItem, clear, cartTotal, removeItem, totalPrice }}>
+        <CartContext.Provider value={{ cart, addItem, clearCart, cartTotal, removeItem, totalPrice, newUser, user, CloseSession }}>
             {children}
         </CartContext.Provider>
     );
