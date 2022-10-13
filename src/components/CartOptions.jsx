@@ -11,6 +11,7 @@ function CartOptions() {
     const { clearCart } = useContext(CartContext);
 
     async function GenerateOrder() {
+        let orderID;
         const order = {
             buyer: { name: user.username, email: user.email },
             items: GenerateItemSimplify(),
@@ -20,12 +21,12 @@ function CartOptions() {
 
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
-        await addDoc(ordersCollection, order);
+        await addDoc(ordersCollection, order).then(({id}) => orderID = id);
 
         await DescontarStock(db);
         clearCart();
 
-        alert("¡Tus puntos fueron canjeados con exito!");
+        alert(`¡Tus puntos fueron canjeados con exito!\nNúmero de orden: ${orderID}`);
     }
 
     function GenerateItemSimplify() {
