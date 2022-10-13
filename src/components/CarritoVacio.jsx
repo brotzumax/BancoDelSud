@@ -5,7 +5,7 @@ function CarritoVacio() {
     return (
         <div className="CarritoVacio">
             <div className="MensajeCarritoVacio">
-                <img src="https://froshlive.com/Assets/images/empty-cart.png" alt="Carrito Vacio" />
+                <img src="https://cdn-icons-png.flaticon.com/512/2762/2762885.png" alt="Carrito Vacio" />
                 <p>¡Ups! Tu lista de pedidos está vacía</p>
                 <p>Revisa nuestro catálogo de artículos para canjear tus puntos por premios increíbles</p>
                 <Link to={"/canje-de-puntos"}>Volver al catálogo</Link>

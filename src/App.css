@@ -537,3 +537,396 @@ h1 {
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/*PESTAÑAS EXTRA*/
+
+.TransferirAhora {
+  display: flex;
+  justify-content: center;
+}
+
+.TransferirAhora .Container {
+  margin-top: 50px;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.TransferirAhora .Container * {
+  margin: 0px;
+}
+
+.TransferirAhora .Container h2 {
+  font-weight: 500;
+}
+
+.TransferirAhora .Container input {
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 400px;
+}
+
+.TransferirAhora .Container button {
+  padding: 15px 20px;
+
+  background-color: #007dfa;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.TransferirAhora .Container div {
+  width: 100%;
+}
+
+.TransferirAhora .Container div p:nth-child(1) {
+  font-size: 14px;
+}
+
+.TransferirAhora .Container div p:nth-child(2) {
+  padding: 25px 0px 25px 15px;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.BlanqueoDePin {
+  display: flex;
+  justify-content: center;
+}
+
+.BlanqueoDePin .Container {
+  margin-top: 50px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.BlanqueoDePin .Container * {
+  margin: 0px;
+}
+
+.BlanqueoDePin .Container .Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.BlanqueoDePin .Container .Info p:nth-child(-n+3) {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.BlanqueoDePin .Container .Info p:nth-child(4) {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.BlanqueoDePin .Container .Info p:nth-child(4) span {
+  font-weight: bold;
+}
+
+.BlanqueoDePin .Container div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.BlanqueoDePin .Container div p {
+  font-size: 14px;
+}
+
+.BlanqueoDePin .Container button {
+  padding: 15px 20px;
+
+  background-color: #007dfa;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Tarjetas h2 {
+  padding-left: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.Tarjetas .Container{
+  display: flex;
+  justify-content: center;
+}
+
+.Tarjetas .Container .Tarjeta {
+  display: flex;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.Tarjetas .Container .Tarjeta .Logo {
+  background-color: crimson;
+  padding: 15px;
+}
+
+.Tarjetas .Container .Tarjeta .Logo img{
+  width: 40px;
+}
+
+.Tarjetas .Container .Tarjeta .Info {
+  padding: 15px;
+  width: 350px;
+}
+
+.Tarjetas .Container .Tarjeta .Info *{
+  margin: 0px;
+}
+
+.Tarjetas .Container .Tarjeta .Info div:nth-child(1) p:nth-child(1){
+  font-size: 14px;
+}
+
+.Tarjetas .Container .Tarjeta .Info div:nth-child(1) p:nth-child(2){
+  color: crimson;
+  font-weight: 600;
+}
+
+.Tarjetas .Container .Tarjeta .Info hr {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.Tarjetas .Container .Tarjeta .Info div:nth-child(3) {
+  color: grey;
+  font-weight: 500;
+}
+
+.Pagos h2 {
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.Pagos .Container {
+  display: flex;
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.Pagos .Container .Servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 200px;
+  gap: 10px;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Pagos .Container .Servicios img {
+  width: 150px;
+}
+
+.Pagos .Container .Servicios p {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.Pagos .Container .NuevoPago {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 15px;
+}
+
+.Pagos .Container .NuevoPago button {
+  padding: 15px ;
+
+  background-color: #ffffff;
+  border: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 16px;
+  text-align: start;
+  cursor: pointer;
+}
+
+.Seguros h2 {
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.Seguros h3 {
+  padding: 10px 20px;
+}
+
+.Seguros .TiposSeguros {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Seguros .TiposSeguros div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.Seguros .TiposSeguros div img {
+  width: 70px;
+}
+
+.Seguros .TiposSeguros div p {
+  margin: 0px;
+}
+
+.Seguros .TiposSeguros div p:nth-child(2){
+  font-size: 24px;
+}
+
+.Seguros .InfoSeguros {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
+.Seguros .InfoSeguros p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.Seguros .InfoSeguros .Contacto {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+
+  border-left: 1px solid gray;
+}
+
+.Seguros .InfoSeguros .Contacto p {
+  margin: 0px;
+}
+
+.Seguros .InfoSeguros .Contacto p:nth-child(1){
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Seguros .InfoSeguros .Contacto p:nth-child(2){
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Inversiones h2 {
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.Inversiones .TiposInversiones {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Inversiones .TiposInversiones div {
+  width: 300px;
+  height: 160px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Inversiones .TiposInversiones div p {
+  margin: 0px;
+}
+
+.Inversiones .TiposInversiones div p:nth-child(1) {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.TurnosSucursal {
+  padding-left: 20px;
+}
+
+.TurnosSucursal h2 {
+  font-weight: 600;
+}
+
+.TurnosSucursal .Container {
+  padding: 0px 20px 20px 20px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+.TurnosSucursal .Container p {
+  margin: 0px;
+  padding-top: 15px;
+  font-weight: 500;
+}
+
+.TurnosSucursal .Container input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.TurnosSucursal .Container select {
+  font-size: 16px;
+}
+
+.TurnosSucursal .Container option {
+  font-size: 16px;
+}
+
+.TurnosSucursal .Container div {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TurnosSucursal .Container div button {
+  padding: 15px 20px;
+
+  background-color: #007dfa;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
