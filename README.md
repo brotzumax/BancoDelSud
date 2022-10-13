@@ -34,7 +34,7 @@ en donde "itemId" es la ID enviada desde el componente "Item" al precionar en el
 
 Obtiene los datos del item enviados por parámetro y los muestra en pantalla. Si es la primera vez que se ve el detalle del producto, se muestra el componente **ItemCount** en donde se puede elegir que cantidad de productos añadir al carrito. Una vez añadidos, aparecerán dos opciones. Una para volver al catálogo, y otra para volver al carrito.
 
-### Cart
+## Cart
 
 El componente **Cart** utiliza el context para saber cuantos productos se encuentran en el carrito. Si este está vacío, muestra un error. Por el contrario, carga el componente **ItemCartList** que realiza un map con todos los productos dentro del carrito.
 
@@ -42,6 +42,6 @@ El componente **Cart** utiliza el context para saber cuantos productos se encuen
 
 Cada **ItemCart** dentro de **ItemCartList** contiene un boton para eliminar. Este usa el context para que, mediante un método y su id, sea eliminado del array del carrito.
 
-### CartOptions
+## CartOptions
 
 En **CartOptions** se encuentran dos link. El primero es para regresar al catálogo. El segundo realiza la orden del pedido mediante el método GenerateOrder(). Este toma los datos del context al iniciar sesión, la fecha, una versión simplificada del array de productos y el costo total. Se conecta con Firebase, guarda la nueva orden y muestra mediante un Alert la id del pedido. También se utiliza el método DescontarStock() para reducir el stock en la base de datos. Luego de todo esto, el carrito es borrado.
