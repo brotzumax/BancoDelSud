@@ -138,6 +138,7 @@ h1 {
 .MensajeBienvenida {
   padding-top: 30px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .MensajeBienvenida p:first-child {
@@ -152,6 +153,59 @@ h1 {
   color: blue;
   font-size: 14px;
   cursor: pointer;
+}
+
+.MensajeBienvenida .Container {
+  padding-top: 20px;
+}
+
+.MensajeBienvenida .Container p {
+  text-align: center;
+}
+
+.MensajeBienvenida .Container .InfoCuentas {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.MensajeBienvenida .Container .InfoCuentas button {
+  padding: 5px 8px;
+  margin-left: 15px;
+  border: 1px solid red;
+  border-radius: 8px;
+  color: red;
+}
+
+.MensajeBienvenida .Container .MasDetalles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.MensajeBienvenida .Container .MasDetalles div {
+  width: 46%;
+  padding: 8px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.MensajeBienvenida .Container .MasDetalles div p {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.MensajeBienvenida .Container .MasDetalles div:nth-child(1) p:nth-child(1) {
+  font-weight: 600;
+}
+
+.MensajeBienvenida .Container .MasDetalles div p:nth-child(2) {
+  font-size: 26px;
 }
 
 .PantallaDeCarga {
